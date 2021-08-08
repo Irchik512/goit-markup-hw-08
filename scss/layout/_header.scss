@@ -1,0 +1,45 @@
+.header {
+    border-bottom: 1px solid #ececec;
+
+    &__container {
+        display: flex;
+        align-items: center;
+    }
+
+    @media screen and (max-width: 767px) {
+        & {
+            padding: 10px;
+        }
+
+        &__container {
+            justify-content: space-between;
+        }
+    }
+}
+.burger-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    line-height: 0;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+        & {
+            display: none;
+        }
+    }
+}
+
+.burger-btn__icon {
+    transition: fill var(--transition-function);
+}
+
+.burger-btn:focus .burger-btn__icon,
+.burger-btn:hover .burger-btn__icon {
+    fill: var(--color-acsent);
+}

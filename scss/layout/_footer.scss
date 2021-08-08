@@ -1,0 +1,134 @@
+.footer {
+    background-color: var(--hero-fot-color);
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    &__box {
+        text-align: center;
+    }
+
+    &__box-title {
+        font-size: 14px;
+        line-height: 1.14;
+        text-transform: uppercase;
+        color: var(--main-fon);
+        margin-bottom: 20px;
+    }
+
+    @media screen and (max-width: 767px) {
+        &__box {
+            width: 100%;
+        }
+        &__box + &__box {
+            margin-top: 60px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        &__container {
+            justify-content: space-around;
+        }
+
+        &__box:last-child {
+            margin-top: 60px;
+            width: 100%;
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        &__box:last-child {
+            margin-left: auto;
+        }
+        &__box:first-child {
+            margin-right: 70px;
+        }
+    }
+}
+.address {
+    margin-top: 20px;
+
+    &__list {
+        font-style: inherit;
+        color: var(--main-fon);
+    }
+
+    &__item + &__item {
+        margin-top: 8px;
+    }
+    &__link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 1.71;
+        letter-spacing: inherit;
+        color: var(--contacts__link-color);
+        transition: color var(--transition-function);
+
+        &__link:hover,
+        &__link:focus {
+            color: var(--main-fon);
+        }
+    }
+    @media screen and (min-width: 1200px) {
+        &__item + &__item {
+            margin-top: 9px;
+        }
+    }
+}
+
+.folowus {
+    width: inherit;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    &__label {
+        width: inherit;
+    }
+
+    &__input {
+        width: inherit;
+        padding: 15px 16px;
+        background-color: transparent;
+        color: var(--main-fon);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        box-sizing: border-box;
+        filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+        border-radius: 4px;
+        cursor: pointer;
+        transition: border-color var(--transition-function), outline var(--transition-function);
+
+        &:placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.25;
+            color: var(--contacts__link-color);
+        }
+
+        &:focus,
+        &:hover {
+            outline: none;
+            border-color: var(--color-acsent);
+        }
+    }
+
+    @media screen and (min-width: 1200px) {
+        & {
+            flex-direction: row;
+        }
+        &__label {
+            margin-right: 12px;
+        }
+        &__input {
+            min-width: 358px;
+        }
+    }
+}

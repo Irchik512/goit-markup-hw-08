@@ -1,0 +1,34 @@
+.tipeofwork {
+    display: none;
+
+    @media screen and (min-width: 1200px) {
+        & {
+            display: block;
+        }
+    }
+}
+
+.tipeofwork__list {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: calc((100% - 60px) / 3);
+}
+
+.tipeofwork__name-box {
+    position: relative;
+}
+
+.tipeofwork__name {
+    width: 100%;
+    position: absolute;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--main-fon);
+    background-color: var(--tipeofwork__name-color);
+    bottom: 0;
+    left: 0;
+    padding-top: 27px;
+    padding-bottom: 27px;
+}
