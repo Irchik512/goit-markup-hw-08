@@ -13,8 +13,11 @@
     width: 100vw;
     height: 100vh;
     background-color: var(--main-fon);
-    // // transform: translateX(100%);
-    // transition: transform var(--transition-function);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    // transform: translateX(100%);
+    transition: transform var(--transition-function);
 
     .burger-btn:focus &,
     .burger-btn:hover & {
@@ -38,6 +41,9 @@
 }
 
 .mobile-menu__close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     background-color: transparent;
     border: none;
@@ -66,6 +72,16 @@
     line-height: 1.18;
     letter-spacing: 0.02em;
     color: var(--title-color);
+    transition: color var(--transition-function);
+
+    &:hover,
+    &:focus {
+        color: var(--color-acsent);
+    }
+
+    &.current {
+        color: var(--color-acsent);
+    }
 }
 
 .connect__list {
@@ -88,22 +104,28 @@
 }
 .mail__link {
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 1.67;
     letter-spacing: 0.02em;
     color: var(--text-color);
+    @media screen and (min-width: 480px) {
+        & {
+            font-size: 24px;
+        }
+    }
 }
 .communication__list {
     display: flex;
-    justify-content: start;
+    flex-wrap: wrap;
+    margin-top: 64px;
 }
-.communication__item:not(:first-child) {
-    border-left: 1px solid;
-    border-right-width: 22px;
-    padding-left: 10px;
+.communication__item:not(:last-child) {
+    border-right: 1px solid;
+    border-left-width: 22px;
     color: rgba(33, 33, 33, 0.2);
 }
 .communication__link {
+    padding: 10px;
     font-weight: 500;
     letter-spacing: 0.02em;
     font-size: 18px;

@@ -44,6 +44,9 @@
     }
 
     @media screen and (min-width: 1200px) {
+        &__box {
+            text-align: left;
+        }
         &__box:last-child {
             margin-left: auto;
         }
@@ -85,7 +88,6 @@
 
 .folowus {
     width: inherit;
-    max-width: 450px;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -120,6 +122,11 @@
         }
     }
 
+    @media screen and (max-width: 1199px) {
+        & {
+            max-width: 450px;
+        }
+    }
     @media screen and (min-width: 1200px) {
         & {
             flex-direction: row;

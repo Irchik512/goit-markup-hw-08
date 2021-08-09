@@ -2,9 +2,14 @@
     flex-wrap: wrap;
     display: flex;
     margin-bottom: 50px;
-    padding-bottom: 16px;
 
-    &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+        &__item:nth-child(-n + 5) {
+            padding-bottom: 16px;
+        }
+    }
+
+    &__item + &__item {
         margin-right: 8px;
     }
 
@@ -35,7 +40,7 @@
     }
 }
 .portfolio {
-    display: flex;
+    width: 100%;
     @media screen and (min-width: 768px) {
         &__item {
             flex-basis: calc((100% - 60px) / 2);
@@ -46,6 +51,11 @@
         &__item {
             flex-basis: calc((100% - 90px) / 3);
         }
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 450px;
     }
 }
 
