@@ -17,12 +17,12 @@
     visibility: hidden;
     pointer-events: none;
     // transform: translateX(100%);
-    transition: transform var(--transition-function);
+    transition: opacity var(--transition-function), visibility var(--transition-function);
 
-    .burger-btn:focus &,
-    .burger-btn:hover & {
-        transform: translateY(-100%);
-    }
+    // .burger-btn:focus &,
+    // .burger-btn:hover & {
+    //     transform: translateY(-100%);
+    // }
 
     @media screen and (min-width: 768px) {
         & {
