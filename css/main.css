@@ -587,7 +587,7 @@ body {
 
 @media screen and (min-width: 481px) {
   .hero {
-    background-image: linear-gradient(to right var(--gradient-color), var(--gradient-color)), url(../images/hero/tablet/bg.jpg);
+    background-image: linear-gradient(to right, var(--gradient-color), var(--gradient-color)), url(../images/hero/tablet/bg.jpg);
   }
 }
 
@@ -822,7 +822,6 @@ body {
 }
 
 .footer {
-  max-width: 1600px;
   background-color: var(--hero-fot-color);
   padding-top: 60px;
   padding-bottom: 60px;
@@ -970,13 +969,18 @@ body {
   flex-wrap: wrap;
   display: flex;
   margin-bottom: 50px;
-  justify-content: center;
+  justify-content: start;
+}
+
+@media screen and (min-width: 768px) {
+  .filters {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 767px) {
-  .filters__item:nth-child(-n + 5) {
+  .filters__item:nth-child(-n + 3) {
     padding-bottom: 16px;
-    justify-content: start;
   }
 }
 

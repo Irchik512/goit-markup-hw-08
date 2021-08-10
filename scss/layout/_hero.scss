@@ -26,7 +26,11 @@
 
     @media screen and (min-width: 481px) {
         & {
-            background-image: linear-gradient(to right var(--gradient-color), var(--gradient-color)),
+            background-image: linear-gradient(
+                    to right,
+                    var(--gradient-color),
+                    var(--gradient-color)
+                ),
                 url(../images/hero/tablet/bg.jpg);
         }
         @media screen and (min-device-pixel-ratio: 2),
