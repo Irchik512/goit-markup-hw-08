@@ -568,6 +568,7 @@ body {
 
 .hero {
   max-width: 1600px;
+  margin: 0 auto;
   text-align: center;
   padding-top: 118px;
   padding-bottom: 118px;
@@ -715,7 +716,6 @@ body {
 }
 
 .team {
-  max-width: 1600px;
   background-color: var(--team-color);
   text-align: center;
 }
