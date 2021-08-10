@@ -2,15 +2,17 @@
     flex-wrap: wrap;
     display: flex;
     margin-bottom: 50px;
+    justify-content: center;
 
     @media screen and (max-width: 767px) {
         &__item:nth-child(-n + 5) {
             padding-bottom: 16px;
+            justify-content: start;
         }
     }
 
     &__item + &__item {
-        margin-right: 8px;
+        margin-left: 8px;
     }
 
     &__button {
@@ -72,6 +74,7 @@
 
 .portfolio__box {
     padding: 20px 24px;
+    padding-right: 0;
     background: var(--main-fon);
     border: 1px solid #eeeeee;
     border-top: none;
@@ -119,13 +122,13 @@
     }
 
     @media screen and (min-width: 768px) {
-        &_text {
+        &__text {
             padding: 49px 24px;
         }
     }
 
     @media screen and (min-width: 1200px) {
-        &_text {
+        &__text {
             padding: 63px 24px;
         }
     }
